@@ -1,0 +1,161 @@
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html lang="ja">
+
+<head>
+<link rel="STYLESHEET" 
+      href=../common/icpc.css
+      type="text/css">
+
+<meta http-equiv="Content-Type" 
+      content="text/html; charset=utf-8">
+
+<title>Problem B</title>
+</head>
+
+<body>
+
+<table class="main">
+<!-- ------------ 1st row ---------------- -->
+<!-- |        ACM Inter Collegiate Programming Contest       | -->
+<tr>
+ <td colspan=2 align=center>
+  
+<h1><img src=../common/images/icpc_logo.png 
+alt="acm International Collegiate Programming Contest"/></h1>
+<div class=banner align=right><font size=-1>
+<i>2018/7/1 JAG Domestic 2018</i></font></div> </td>
+</tr>
+
+<!-- ------------ 2nd row ---------------- -->
+<!-- menu in the 1st column. empty in the 2nd. -->
+<tr>
+ <td class=menu rowspan=4 valign=top nowrap>
+  </td>
+ <td>
+  </td>
+</tr>
+
+<!-- ------------ 3rd row ---------------- -->
+<!-- no 1st column. empty in the 2nd. -->
+<tr>
+ <td>
+  </td>
+</tr>
+
+<!-- ------------ 4th row ------------ -->
+<!-- nothing in the 1st column. everything else in the 2nd -->
+<tr>
+ <td class="main">
+   <h2>Links</h2><div><a href=A_ja.html>A</a>
+<a href=#section_B>B</a>
+<a href=C_ja.html>C</a>
+<a href=D_ja.html>D</a>
+<a href=E_ja.html>E</a>
+<a href=F_ja.html>F</a>
+<a href=G_ja.html>G</a>
+<a href=H_ja.html>H</a>
+</div>
+<a name=section_B><h2>Problem B</h2>
+<style type="text/css">
+    blockquote {
+        white-space: pre;
+        word-break: break-all;
+        word-wrap: break-word;
+    }
+    .c_table {
+      border-collapse: collapse;
+      display: table-cell;
+      padding-left: 48px;
+    }
+    .c_th, .c_td {
+      border: solid 1px black;
+      text-align: center;
+      padding: 5px;
+    }
+    .c_thead {
+      background-color: aqua;
+    }
+</style>
+<h3>一般化うるう年</h3>
+<div>
+<!-- begin ja only -->
+
+<p>通常，西暦 <i>x</i> 年がうるう年か否かは以下のように定義されている．</p>
+<ol>
+<li><i>x</i> が 400 の倍数であれば，うるう年である．</li>
+<li>そうでないとき，<i>x</i> が 100 の倍数であれば，うるう年ではない．</li>
+<li>そうでないとき，<i>x</i> が 4 の倍数であれば，うるう年である．</li>
+<li>そうでないとき，うるう年ではない．</li>
+</ol>
+<p>これは次のように一般化できる．ある数列 <i>A<sub>1</sub>, ..., A<sub>n</sub></i> について，西暦 <i>x</i> 年が "一般化うるう年" であるか否かを以下のように定義する．</p>
+<ol>
+<li><i>x</i> が <i>A<sub>i</sub></i> の倍数であるような最小の <i>i</i> (<i>1 &le; i &le; n</i>) について，<i>i</i> が奇数であれば一般化うるう年であり，偶数であれば一般化うるう年ではない．</li>
+<li>そのような <i>i</i> が存在しないとき，<i>n</i> が奇数であれば一般化うるう年ではなく，偶数であれば一般化うるう年である．</li>
+</ol>
+<p>例えば <i>A = [400, 100, 4]</i> のとき，この <i>A</i> に対する一般化うるう年は通常のうるう年と等価になる．</p>
+<p>数列 <i>A<sub>1</sub>, ..., A<sub>n</sub></i> と正の整数 <i>l, r</i> が与えられるので．<i>l &le; x &le; r</i> なる正の整数 <i>x</i> のうち，西暦 <i>x</i> 年が <i>A</i> に対する一般化うるう年であるような <i>x</i> の個数を答えよ．</p>
+<!-- end ja only -->
+</div>
+<h3>Input</h3>
+<div>
+<!-- begin ja only -->
+
+<p>入力は最大で 50 個のデータセットからなる．各データセットは次の形式で表される．</p>
+<blockquote><i>n</i> <i>l</i> <i>r</i>
+<i>A<sub>1</sub></i>
+<i>A<sub>2</sub></i>
+<i>...</i>
+<i>A<sub>n</sub></i></blockquote>
+<p>整数 <i>n</i> は <i>1 &le; n &le; 50</i> を満たす．整数 <i>l,r</i> は<i>1 &le; l &le; r &le; 4000</i> を満たす．各 <i>i</i> に対し整数 <i>A<sub>i</sub></i> は <i>1 &le; A<sub>i</sub> &le; 4000</i> を満たす．</p>
+<p>入力の終わりは 3 つのゼロからなる行で表される．</p>
+<!-- end ja only -->
+</div>
+<h3>Output</h3>
+<div>
+<!-- begin ja only -->
+
+<p>各データセットについて，答えを 1 行で出力せよ．</p>
+
+<!-- end ja only -->
+</div>
+<h3>Sample Input</h3><div><pre>3 1988 2014
+400
+100
+4
+1 1000 1999
+1
+2 1111 3333
+2
+2
+6 2000 3000
+5
+7
+11
+9
+3
+13
+0 0 0
+</pre></div><h3>Output for the Sample Input</h3><div><pre>7
+1000
+2223
+785
+</pre></div><div align=right>(End of Problem B) <a href=A_ja.html>A</a>
+<a href=#section_B>B</a>
+<a href=C_ja.html>C</a>
+<a href=D_ja.html>D</a>
+<a href=E_ja.html>E</a>
+<a href=F_ja.html>F</a>
+<a href=G_ja.html>G</a>
+<a href=H_ja.html>H</a>
+</div>
+ </td>                     
+</tr>                      
+</table>                   
+
+</body>
+</html>
+
+
+
+

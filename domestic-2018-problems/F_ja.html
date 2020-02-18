@@ -1,0 +1,181 @@
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html lang="ja">
+
+<head>
+<link rel="STYLESHEET" 
+      href=../common/icpc.css
+      type="text/css">
+
+<meta http-equiv="Content-Type" 
+      content="text/html; charset=utf-8">
+
+<title>Problem F</title>
+</head>
+
+<body>
+
+<table class="main">
+<!-- ------------ 1st row ---------------- -->
+<!-- |        ACM Inter Collegiate Programming Contest       | -->
+<tr>
+ <td colspan=2 align=center>
+  
+<h1><img src=../common/images/icpc_logo.png 
+alt="acm International Collegiate Programming Contest"/></h1>
+<div class=banner align=right><font size=-1>
+<i>2018/7/1 JAG Domestic 2018</i></font></div> </td>
+</tr>
+
+<!-- ------------ 2nd row ---------------- -->
+<!-- menu in the 1st column. empty in the 2nd. -->
+<tr>
+ <td class=menu rowspan=4 valign=top nowrap>
+  </td>
+ <td>
+  </td>
+</tr>
+
+<!-- ------------ 3rd row ---------------- -->
+<!-- no 1st column. empty in the 2nd. -->
+<tr>
+ <td>
+  </td>
+</tr>
+
+<!-- ------------ 4th row ------------ -->
+<!-- nothing in the 1st column. everything else in the 2nd -->
+<tr>
+ <td class="main">
+   <h2>Links</h2><div><a href=A_ja.html>A</a>
+<a href=B_ja.html>B</a>
+<a href=C_ja.html>C</a>
+<a href=D_ja.html>D</a>
+<a href=E_ja.html>E</a>
+<a href=#section_F>F</a>
+<a href=G_ja.html>G</a>
+<a href=H_ja.html>H</a>
+</div>
+<a name=section_F><h2>Problem F</h2>
+<style type="text/css">
+    blockquote {
+        white-space: pre;
+        word-break: break-all;
+        word-wrap: break-word;
+    }
+    .c_table {
+      border-collapse: collapse;
+      display: table-cell;
+      padding-left: 48px;
+    }
+    .c_th, .c_td {
+      border: solid 1px black;
+      text-align: center;
+      padding: 5px;
+    }
+    .c_thead {
+      background-color: aqua;
+    }
+</style>
+<h3>対空シールド</h3>
+<div>
+<!-- begin ja only -->
+
+<p>時は3xxx年，太陽系外の惑星に進出した人類は，大量の隕石の飛来による基地の被害で頭を悩ませていた．国際宇宙防護会社（International Cosmic Protection Company）は，この問題を解決するために新たな対空シールドを開発した．</p>
+<p>防護対象の基地は同じサイズの <i>N</i> 個のユニットが一直線上に等間隔で並んだ形をしており， 1 から <i>N</i> までの番号が順に付けられている．ICPCは，これらのユニットに，合計で <i>M</i> 個のシールドを設置することにした．<i>i</i> 番目のシールドが能力 <i>a<sub>i</sub></i> を持ち，ユニット <i>x<sub>i</sub></i> に設置されているとする．このとき，あるユニット <i>u</i> における強度は，以下の式で表される．</p>
+<blockquote><i>&Sigma;<sub>i=1</sub><sup>M</sup> max(a<sub>i</sub>-(u-x<sub>i</sub>)<sup>2</sup>,0)</i></blockquote>
+<p>シールドはユニットにのみ設置することができ，複数のシールドを同じユニットに設置することもできる．そして，ICPCに支払われる報酬は <i>N</i> 個のユニットの強度の最小値に比例した額となる．</p>
+<p>シールドの能力は全て既に決まっており，位置も最後の 1 つ以外は決定している．最後の 1 つのシールドの位置を決めるにあたって，報酬がなるべく大きくなるようにしたい．このように最後のシールドの位置を決めたときの強度の最小値を求めよ．</p>
+<!-- end ja only -->
+</div>
+<h3>Input</h3>
+<div>
+<!-- begin ja only -->
+
+<p>入力は最大で 30 個のデータセットからなる．各データセットは次の形式で表される．</p>
+<blockquote><i>N</i> <i>M</i>
+<i>a<sub>1</sub></i> <i>x<sub>1</sub></i>
+…
+<i>a<sub>M-1</sub></i> <i>x<sub>M-1</sub></i>
+<i>a<sub>M</sub></i></blockquote>
+<p><i>N</i> はユニットの個数，<i>M</i> はシールドの個数を表す．<i>N</i> と <i>M</i> は整数であり，<i>1 &le; N &le; 10<sup>6</sup></i>，<i>1 &le; M &le; 10<sup>5</sup></i>を満たす．続く <i>M</i> 行には各シールドの情報が与えられる．<i>a<sub>i</sub></i> と <i>x<sub>i</sub></i> はそれぞれシールドの能力と位置を表す整数であり，<i>1 &le; a<sub>i</sub> &le; 10<sup>9</sup></i>，<i>1 &le; x<sub>i</sub> &le; N</i> を満たす．<i>M</i> 番目のシールドの位置はまだ決定していないため，入力で与えられないことに注意せよ．</p>
+<p>入力の終わりは 2 つのゼロからなる行で表される．</p>
+<!-- end ja only -->
+</div>
+<h3>Output</h3>
+<div>
+<!-- begin ja only -->
+
+<p>各データセットについて，<i>M</i> 番目のシールドの設置位置を適切に決めたときの，強度の最小値を 1 行に出力せよ．</p>
+
+<!-- end ja only -->
+</div>
+<h3>Sample Input</h3><div><pre>3 3
+2 1
+2 2
+10
+10 4
+1 1
+1 5
+1 9
+1
+5 7
+1000000000 1
+1000000000 1
+1000000000 3
+1000000000 3
+1000000000 5
+1000000000 5
+1
+10000 11
+10934235 560
+3155907 1508
+10901182 2457
+3471816 3590
+10087848 4417
+16876957 5583
+23145027 6540
+15162205 7454
+1749653 8481
+6216466 9554
+7198514
+701 14
+8181 636
+4942 273
+1706 282
+6758 20
+7139 148
+6055 629
+8765 369
+5487 95
+6111 77
+2302 419
+9974 699
+108 444
+1136 495
+2443
+0 0
+</pre></div><h3>Output for the Sample Input</h3><div><pre>10
+0
+5999999960
+23574372
+985
+</pre></div><div align=right>(End of Problem F) <a href=A_ja.html>A</a>
+<a href=B_ja.html>B</a>
+<a href=C_ja.html>C</a>
+<a href=D_ja.html>D</a>
+<a href=E_ja.html>E</a>
+<a href=#section_F>F</a>
+<a href=G_ja.html>G</a>
+<a href=H_ja.html>H</a>
+</div>
+ </td>                     
+</tr>                      
+</table>                   
+
+</body>
+</html>
+
+
+
+
